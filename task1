@@ -1,0 +1,18 @@
+<?php 
+function balance($left,$right){
+$exclamationValue = 2;
+$questionmarkValue = 3;
+
+ $leftcounter = mb_substr_count($left,"!")*$exclamationValue +mb_substr_count($left,"?")*$questionmarkValue;
+ $rightcounter = mb_substr_count($right,"!")*$exclamationValue +mb_substr_count($right,"?")*$questionmarkValue;
+ if ($leftcounter>$rightcounter){
+ 	return "Left";
+ }
+ elseif ($leftcounter<$rightcounter){
+ 	return "Right";
+ }
+ else
+ 	return "Balance";
+  
+}
+?>
